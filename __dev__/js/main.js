@@ -48,8 +48,6 @@ function populateSongBank() {
       el = songEls[i];
       label = el.innerText.trim().toLowerCase();
 
-      console.log(label, value, label.indexOf(value));
-
       if (label.indexOf(value) >= 0) {
         el.hidden = false;
       } else {

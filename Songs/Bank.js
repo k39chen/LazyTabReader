@@ -7,11 +7,11 @@ const SONG_BANK = [
   /*
   {
     // this is the singly most important field to populate correctly
-    id: "{SONG_TITLE} - {ARTIST} ({RELEASE_DATE})",
+    id: "{SONG_TITLE} - {ARTIST} ({RELEASE_YEAR})",
 
     // misc metadata
     title: 'SONG_TITLE',
-    subtitle: 'ALBUM_NAME (RELEASE_DATE)',
+    subtitle: 'ALBUM_NAME (RELEASE_YEAR)',
     artist: 'ARTIST_NAME',
     instrumentalist: 'INSTRUMENTALIST_NAME',
     backingTrack: 'LINK_TO_BACKING_TRACK',
@@ -38,24 +38,6 @@ const SONG_BANK = [
   {
     id: 'Orion - Metallica (2005)',
     title: 'Orion',
-    subtitle: 'Master of Puppets (2005)',
-    artist: 'Metallica',
-    instrumentalist: 'Cliff Burton',
-    backingTrack: 'https://youtu.be/xm6p8g83BvM',
-    tuning: 'Standard Tuning',
-    style: 'Heavy Metal',
-    tempo: '129 BPM',
-    totalRegisteredFrames: 81,
-    frameWidth: 864,
-    frameHeight: 200
-  },
-
-  //================================================================
-  // Heavy Rain - Metallica (2005)
-  //================================================================
-  {
-    id: 'Heavy Rain - Metallica (2005)',
-    title: 'Heavy Rain',
     subtitle: 'Master of Puppets (2005)',
     artist: 'Metallica',
     instrumentalist: 'Cliff Burton',
