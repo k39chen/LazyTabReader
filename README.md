@@ -1,5 +1,12 @@
 # Lazy Tab Reader
 
+## Introduction
+
+Cheap and easy way to transcribe without whipping out MuseScore or any other muscial notation software. Simply screenshot
+a bunch of frames once, add a little helping config, and you're ready to JAM!
+
+![alt='promo.png'](promo.png)
+
 ## How to add new song
 
 To add a new song to be supported by the LazyTabReader, do the following:
