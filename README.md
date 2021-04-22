@@ -5,8 +5,6 @@
 Cheap and easy way to transcribe without whipping out MuseScore or any other muscial notation software. Simply screenshot
 a bunch of frames once, add a little helping config, and you're ready to JAM!
 
-Excited? Curious? Confused? Skeptical? Say no more! [Try it now](http://htmlpreview.github.io/?https://github.com/k39chen/LazyTabReader/blob/master/index.html)!
-
 ![alt='promo.png'](promo.png)
 
 ## How to add new song
