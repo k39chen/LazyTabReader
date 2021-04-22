@@ -22,6 +22,15 @@ To add a new song to be supported by the LazyTabReader, do the following:
     1. From UI, click the song that you wish to play
 6. Ready to JAM
 
+## Trick for easier screenshotting sessions
+
+1. Use `Cmd + Shift + 5`
+2. Drag captured selection to appropriate area
+3. Start playing your YouTube video that has tabs included
+4. Click `Capture` when ready!
+5. Repeat until song is done and all frames are captured!
+6. Once all frames are screenshotted, all frames need to be indexed accordingly, can consider using the `__dev__/node_scripts/assignFrameIndex.js`, but that is definitely WIP
+
 ## Code Overview
 
 - all main code driving this "app" is located under `__dev__`
