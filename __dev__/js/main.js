@@ -114,9 +114,18 @@ function openSong(songId) {
   sideBarEl.className = '';
 
   songPageContainerEl.innerHTML = `
-    <div id="fullscreenToggle"">Enter Fullscreen</div>
-    <div id="filterToggle"">Apply Filter</div>
-    <div id="autoscrollToggle"">Enable Autoscroll</div>
+    <div id="viewControls">
+      <div id="fullscreenToggle"">Enter Fullscreen</div>
+      <div id="filterToggle"">Apply Filter</div>
+
+      <div id="autoscrollToggleContainer">
+        <div id="autoscrollToggle"">Enable Autoscroll</div>
+        <div id="autoscrollSpeedContainer" hidden>
+          <input id="autoscrollSpeed" type="number" value="${AUTOSCROLLER_SPEED}" />
+          <span>ms/px</span>
+        </div>
+      </div>
+    </div>
 
     <div id="header">
       <div id="info">
@@ -145,9 +154,15 @@ function openSong(songId) {
   document.getElementById('fullscreenToggle').addEventListener('click', () => toggleFullscreen());
   document.getElementById('filterToggle').addEventListener('click', () => toggleFilter());
   document.getElementById('autoscrollToggle').addEventListener('click', () => toggleAutoscroll());
+  document.getElementById('autoscrollSpeed').addEventListener('keyup', (ev) => {
+    ev.currentTarget.value = Math.max(ev.currentTarget.value, 10);
+    AUTOSCROLLER_SPEED = ev.currentTarget.value;
+    startAutoScroller();
+  });
 
   populateSongData();
   populateFrames();
+  stopAutoScroller();
 }
 
 function toggleFullscreen() {
@@ -179,6 +194,7 @@ function toggleFilter() {
 function startAutoScroller() {
   const songPageContainerEl = document.getElementById('songPageContainer');
 
+  stopAutoScroller();
   songPageContainerEl.scrollTop = 0;
 
   AUTOSCROLLER = setInterval(() => {
@@ -193,13 +209,19 @@ function stopAutoScroller() {
 
 function toggleAutoscroll() {
   const autoscrollToggleEl = document.getElementById('autoscrollToggle');
+  const autoscrollSpeedEl = document.getElementById('autoscrollSpeed');
+  const autoscrollSpeedContainerEl = document.getElementById('autoscrollSpeedContainer');
 
   if (AUTOSCROLLER) {
     stopAutoScroller();
     autoscrollToggleEl.innerHTML = 'Enable Autoscroll';
+    autoscrollSpeedContainerEl.hidden = true;
   } else {
     startAutoScroller();
     autoscrollToggleEl.innerHTML = 'Disable Autoscroll';
+    autoscrollSpeedContainerEl.hidden = false;
+
+    setTimeout(() => autoscrollSpeedEl.select(), 100);
   }
 }
 
