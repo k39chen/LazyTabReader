@@ -27,7 +27,7 @@ function populateSongBank() {
     songItemEl.dataset.songId = songData.id;
 
     songItemEl.innerHTML = `
-      <div class="song-list-item-frame-count">${songData.totalRegisteredFrames} frame${songData.totalRegisteredFrames === 1 ? '' : 's'}</div>
+      <div class="song-list-item-frame-count">${songData.totalFrames} frame${songData.totalFrames === 1 ? '' : 's'}</div>
       <div class="song-list-item-title">${songData.title}</div>
       <div class="song-list-artist">${songData.artist}</div>
       <div class="song-list-item-subtitle">${songData.subtitle}</div>
@@ -187,7 +187,7 @@ function populateFrames() {
   let frameWrapEl;
   let frameEl;
 
-  for (let i = 1; i <= SONG_DATA.totalRegisteredFrames; i++) {
+  for (let i = 1; i <= SONG_DATA.totalFrames; i++) {
     frameFilePath = getFrameFilePath(i);
 
     frameWrapEl = document.createElement('div');
@@ -213,7 +213,7 @@ function populateFrames() {
 
 function getFrameFilePath(index) {
   const framePath = `Songs/${SONG_DATA.id}/frames`;
-  const totalFrames = SONG_DATA.totalRegisteredFrames;
+  const totalFrames = SONG_DATA.totalFrames;
   let zeroBuffer = '';
   if (totalFrames >= 100) {
     if (index < 10) {

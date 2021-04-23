@@ -20,7 +20,7 @@ const SONG_BANK = [
     tempo: '100 BPM',
 
     // frame data
-    totalRegisteredFrames: 100,Sc
+    totalFrames: 100,
 
     // this will be the most annoying part, to get these values,
     // first just insert the natural dimensions of each screenshot (average)
@@ -45,7 +45,7 @@ const SONG_BANK = [
     tuning: 'Standard Tuning',
     style: 'Heavy Metal',
     tempo: '129 BPM',
-    totalRegisteredFrames: 80,
+    totalFrames: 80,
     frameWidth: 864,
     frameHeight: 200
   },
@@ -63,7 +63,7 @@ const SONG_BANK = [
     tuning: 'Standard Tuning',
     style: 'Funk',
     tempo: '100 BPM',
-    totalRegisteredFrames: 30,
+    totalFrames: 30,
     frameWidth: 1070,
     frameHeight: 300
   },
@@ -81,7 +81,7 @@ const SONG_BANK = [
     tuning: 'Standard Tuning',
     style: 'Rock',
     tempo: '111 BPM',
-    totalRegisteredFrames: 33,
+    totalFrames: 33,
     frameWidth: 1180,
     frameHeight: 327
   },
@@ -99,7 +99,7 @@ const SONG_BANK = [
     tuning: 'Standard Tuning',
     style: 'Funk',
     tempo: '96 BPM',
-    totalRegisteredFrames: 37,
+    totalFrames: 37,
     frameWidth: 990,
     frameHeight: 277
   },
@@ -117,7 +117,7 @@ const SONG_BANK = [
     tuning: 'Standard Tuning',
     style: 'Funk Rock',
     tempo: '91 BPM',
-    totalRegisteredFrames: 36,
+    totalFrames: 36,
     frameWidth: 911,
     frameHeight: 243
   },
@@ -135,7 +135,7 @@ const SONG_BANK = [
     tuning: 'Standard Tuning',
     style: 'Pop',
     tempo: '60 BPM',
-    totalRegisteredFrames: 36,
+    totalFrames: 36,
     frameWidth: 895,
     frameHeight: 220
   },
@@ -153,7 +153,7 @@ const SONG_BANK = [
     tuning: 'Standard Tuning',
     style: 'Pop',
     tempo: '101 BPM',
-    totalRegisteredFrames: 33,
+    totalFrames: 33,
     frameWidth: 945,
     frameHeight: 231
   },
@@ -171,7 +171,7 @@ const SONG_BANK = [
     tuning: 'Standard Tuning',
     style: 'Soundtrack',
     tempo: '61 BPM',
-    totalRegisteredFrames: 31,
+    totalFrames: 31,
     frameWidth: 985,
     frameHeight: 258
   },
@@ -189,7 +189,7 @@ const SONG_BANK = [
     tuning: 'Standard Tuning',
     style: 'Rock',
     tempo: '173 BPM',
-    totalRegisteredFrames: 85,
+    totalFrames: 85,
     frameWidth: 915,
     frameHeight: 252
   },
@@ -207,7 +207,7 @@ const SONG_BANK = [
     tuning: 'Standard Tuning',
     style: 'Heavy Metal',
     tempo: '196 BPM',
-    totalRegisteredFrames: 76,
+    totalFrames: 76,
     frameWidth: 980,
     frameHeight: 255
   },

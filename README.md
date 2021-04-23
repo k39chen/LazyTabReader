@@ -36,8 +36,8 @@ To add a new song to be supported by the LazyTabReader, do the following:
     1. Take screenshots and save to `frames`
     2. Once all frames are created, rename accordingly, in order (1-indexed, with zero prefix buffer)
 4. Add new song to song bank
-    2. Open `SongBank.js` and add new entry using the provided template as a starting point
-    3. Make appropriate song data adjustments
+    1. Open `SongBank.js` and add new entry using the provided template as a starting point
+    2. Make appropriate song data adjustments
 5. Open `LazyTabReader.html`
     1. From UI, click the song that you wish to play
 6. Ready to JAM
@@ -46,18 +46,18 @@ To add a new song to be supported by the LazyTabReader, do the following:
 
 ```javascript
 {
-                     id : "{ARTIST} - {SONG_TITLE} ({RELEASE_YEAR})",
-                  title : 'SONG_TITLE',
-               subtitle : 'ALBUM_NAME (RELEASE_YEAR)',
-                 artist : 'ARTIST_NAME',
-        instrumentalist : 'INSTRUMENTALIST_NAME',
-                 source : 'LINK_TO_SOURCE',
-                  style : 'STYLE',
-                 tuning : 'Standard Tuning',
-                  tempo : '100 BPM',
-  totalRegisteredFrames : 100,
-             frameWidth : 1000,
-            frameHeight : 200
+               id : "{ARTIST} - {SONG_TITLE} ({RELEASE_YEAR})",
+            title : 'SONG_TITLE',
+         subtitle : 'ALBUM_NAME (RELEASE_YEAR)',
+           artist : 'ARTIST_NAME',
+  instrumentalist : 'INSTRUMENTALIST_NAME',
+           source : 'LINK_TO_SOURCE',
+            style : 'STYLE',
+           tuning : 'Standard Tuning',
+            tempo : '100 BPM',
+      totalFrames : 100,
+       frameWidth : 1000,
+      frameHeight : 200
 }
 ```
 
