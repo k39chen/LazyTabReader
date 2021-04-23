@@ -159,7 +159,8 @@ function openSong(songId) {
       <div id="info">
         <div id="title"></div>
         <div id="subtitle"></div>
-        <a id="source" href="" target="_blank">Source</a>
+        <a id="source" href="" target="_blank">Original Source</a> |
+        <a id="backingTrack" href="" target="_blank">Practice Track</a>
       </div>
 
       <div id="details">
@@ -260,6 +261,7 @@ function populateSongData() {
   document.getElementById('title').innerHTML = SONG_DATA.title;
   document.getElementById('subtitle').innerHTML = SONG_DATA.subtitle;
   document.getElementById('source').href = SONG_DATA.source;
+  document.getElementById('backingTrack').href = SONG_DATA.backingTrack;
   document.getElementById('style').innerHTML = SONG_DATA.style;
   document.getElementById('tuning').innerHTML = SONG_DATA.tuning;
   document.getElementById('tempo').innerHTML = SONG_DATA.tempo;
