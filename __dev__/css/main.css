@@ -24,6 +24,15 @@ input {
   box-sizing: border-box;
 }
 
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 /* LOGO */
 
 #logo {
