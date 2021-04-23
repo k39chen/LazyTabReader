@@ -69,6 +69,150 @@ const SONG_BANK = [
   },
 
   //================================================================
+  // Red Hot Chili Peppers - Look Around (2011)
+  //================================================================
+  {
+    id: 'Red Hot Chili Peppers - Look Around (2011)',
+    title: 'Look Around',
+    subtitle: 'I\'m With You (2011)',
+    artist: 'Red Hot Chili Peppers',
+    instrumentalist: 'Flea (Michael Peter Balzary)',
+    backingTrack: 'https://youtu.be/JRsysmKo5MM',
+    tuning: 'Standard Tuning',
+    style: 'Rock',
+    tempo: '111 BPM',
+    totalRegisteredFrames: 33,
+    frameWidth: 1180,
+    frameHeight: 327
+  },
+
+  //================================================================
+  // Peter Gabriel - Sledgehammer (1986)
+  //================================================================
+  {
+    id: 'Peter Gabriel - Sledgehammer (1986)',
+    title: 'Sledgehammer',
+    subtitle: 'So (1986)',
+    artist: 'Peter Gabriel',
+    instrumentalist: '',
+    backingTrack: 'https://youtu.be/a5DVY1oGyBo',
+    tuning: 'Standard Tuning',
+    style: 'Funk',
+    tempo: '96 BPM',
+    totalRegisteredFrames: 37,
+    frameWidth: 990,
+    frameHeight: 277
+  },
+
+  //================================================================
+  // James Gang - Funk 49 (1970)
+  //================================================================
+  {
+    id: 'James Gang - Funk 49 (1970)',
+    title: 'Funk #49',
+    subtitle: 'James Gang Rides Again (1970)',
+    artist: 'James Gang',
+    instrumentalist: 'Dale Peters',
+    backingTrack: 'https://youtu.be/UGj_ydz4u8k',
+    tuning: 'Standard Tuning',
+    style: 'Funk Rock',
+    tempo: '91 BPM',
+    totalRegisteredFrames: 36,
+    frameWidth: 911,
+    frameHeight: 243
+  },
+
+  //================================================================
+  // Vulfpeck - 1612 (2019)
+  //================================================================
+  {
+    id: 'Vulfpeck - 1612 (2019)',
+    title: '1612',
+    subtitle: 'Live at Madison Square Garden (2019)',
+    artist: 'Vulpeck',
+    instrumentalist: 'Joe Dart',
+    backingTrack: 'https://youtu.be/iO1XPgH68jQ',
+    tuning: 'Standard Tuning',
+    style: 'Pop',
+    tempo: '60 BPM',
+    totalRegisteredFrames: 36,
+    frameWidth: 895,
+    frameHeight: 220
+  },
+
+  //================================================================
+  // Vulfpeck - Animal Spirits (2016)
+  //================================================================
+  {
+    id: 'Vulfpeck - Animal Spirits (2016)',
+    title: 'Animal Spirits',
+    subtitle: 'The Beautiful Game (2016)',
+    artist: 'Vulpeck',
+    instrumentalist: 'Joe Dart',
+    backingTrack: 'https://youtu.be/Z1UOwoajws4',
+    tuning: 'Standard Tuning',
+    style: 'Pop',
+    tempo: '101 BPM',
+    totalRegisteredFrames: 33,
+    frameWidth: 945,
+    frameHeight: 231
+  },
+
+  //================================================================
+  // Persona 5 - Life Goes On (2018)
+  //================================================================
+  {
+    id: 'Persona 5 - Life Goes On (2018)',
+    title: 'Life Goes On',
+    subtitle: 'Persona 5 Original Soundtrack (2018)',
+    artist: 'Shoji Meguro',
+    instrumentalist: '',
+    backingTrack: 'https://youtu.be/_PcyUr7UPpA',
+    tuning: 'Standard Tuning',
+    style: 'Soundtrack',
+    tempo: '61 BPM',
+    totalRegisteredFrames: 31,
+    frameWidth: 985,
+    frameHeight: 258
+  },
+
+  //================================================================
+  // Deep Purple - Highway Star (1972)
+  //================================================================
+  {
+    id: 'Deep Purple - Highway Star (1972)',
+    title: 'Highway Star',
+    subtitle: 'Machine Head (1972)',
+    artist: 'Deep Purple',
+    instrumentalist: 'Roger Glover',
+    backingTrack: 'https://youtu.be/nKihuIlLvfg',
+    tuning: 'Standard Tuning',
+    style: 'Rock',
+    tempo: '173 BPM',
+    totalRegisteredFrames: 85,
+    frameWidth: 915,
+    frameHeight: 252
+  },
+
+  //================================================================
+  // Iron Maiden - The Number Of The Beast (1982)
+  //================================================================
+  {
+    id: 'Iron Maiden - The Number Of The Beast (1982)',
+    title: 'The Number Of The Beast',
+    subtitle: 'The Number Of The Beast (1982)',
+    artist: 'Iron Maiden',
+    instrumentalist: 'Steve Harris',
+    backingTrack: 'https://youtu.be/5k5EmaIHVZI',
+    tuning: 'Standard Tuning',
+    style: 'Heavy Metal',
+    tempo: '196 BPM',
+    totalRegisteredFrames: 76,
+    frameWidth: 980,
+    frameHeight: 255
+  },
+
+  //================================================================
   //                 ----- END OF LIST -----
   //================================================================
 ];

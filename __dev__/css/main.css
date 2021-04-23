@@ -150,6 +150,10 @@ input {
   margin-left: 1em;
 }
 
+#filterToggle {
+  float: left;
+}
+
 #fullscreenToggle:hover,
 #filterToggle:hover {
   text-decoration: underline;
