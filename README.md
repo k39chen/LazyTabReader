@@ -31,7 +31,7 @@ Simply, follow these no-nonsense steps:
 
 To add a new song to be supported by the LazyTabReader, do the following:
 
-1. Create new folder with the pattern: `${Artist} - ${Song name} (${Year})` (call this `X` for ths purpose of this guide)
+1. Create new folder with the pattern: `${Artist} - ${Song name} (${Year})` (this needs to match your song ID exactly)
 2. Create subfolder `frames`
     1. Take screenshots and save to `frames`
     2. Once all frames are created, rename accordingly, in order (1-indexed, with zero prefix buffer)
