@@ -46,6 +46,7 @@ function populateSongBank() {
   logoEl.addEventListener('click', () => {
     const sideBarEl = document.getElementById('sideBar');
     sideBarEl.className = 'initial-state';
+    document.title = 'Lazy Tab Reader';
   });
 
   songBankFilterInputEl.addEventListener('keyup', (ev) => {
