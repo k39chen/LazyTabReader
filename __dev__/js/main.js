@@ -17,6 +17,7 @@ var SONG_DATA = null;
 function populateSongBank() {
   console.log('%c -- SONG BANK --', 'color: orange;', SONG_BANK);
 
+  const logoEl = document.getElementById('logo');
   const songListEl = document.getElementById('songBankList');
   const songBankFilterInputEl = document.getElementById('songBankFilterInput');
 
@@ -41,6 +42,11 @@ function populateSongBank() {
   });
 
   setBankCount();
+
+  logoEl.addEventListener('click', () => {
+    const sideBarEl = document.getElementById('sideBar');
+    sideBarEl.className = 'initial-state';
+  });
 
   songBankFilterInputEl.addEventListener('keyup', (ev) => {
     const songListEl = document.getElementById('songBankList');
@@ -95,7 +101,10 @@ function openSong(songId) {
 
   console.log('%c -- OPENING SONG --', 'color: orange;', SONG_DATA);
 
+  const sideBarEl = document.getElementById('sideBar');
   const songPageContainerEl = document.getElementById('songPageContainer');
+
+  sideBarEl.className = '';
 
   songPageContainerEl.innerHTML = `
     <div id="fullscreenToggle" on-click="toggleFullscreen()">Enter Fullscreen</div>

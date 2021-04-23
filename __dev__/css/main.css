@@ -24,6 +24,17 @@ input {
   box-sizing: border-box;
 }
 
+/* LOGO */
+
+#logo {
+  transition: color 0.2s;
+  cursor: pointer;
+}
+
+#logo:hover {
+  color: var(--accent-color);
+}
+
 /* SIDE BAR STYLES */
 
 #sideBar {
@@ -110,6 +121,53 @@ input {
 
 .song-list-item-subtitle {
   color: #999;
+}
+
+/* SIDE BAR STYLES INITIAL STATE */
+
+#sideBar.initial-state {
+  z-index: 1000;
+  width: 100%;
+  background: white;
+}
+
+#sideBar.initial-state #songBankFilterInput {
+  min-width: 20em;
+  max-width: 25vw;
+}
+
+#sideBar.initial-state #songBankList {
+  overflow: auto;
+  padding: 2em;
+}
+
+#sideBar.initial-state .song-list-item {
+  transition: transform 0.2s, opacity 0.2s, background-color 0.2s;
+  transition-timing-function: ease-in-out;
+  float: left;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  width: calc(25vw - 5.125em);
+  height: 10em;
+  margin: 1em;
+  background-color: #fafafa;
+  border: solid 1px #d7d7d7;
+  opacity: 0.8;
+  text-align: center;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+#sideBar.initial-state .song-list-item:hover {
+  transform: scale(1.02);
+  opacity: 1;
+  background-color: #e5f1f7;
+}
+
+#sideBar.initial-state .song-list-item:active {
+  transform: scale(0.95);
+  filter: brightness(0.9);
 }
 
 /* SONG PAGE STYLES */
@@ -225,4 +283,8 @@ input {
   top: 0;
   left: 0;
   height: 100%;
+}
+
+[hidden] {
+  display: none !important;
 }
