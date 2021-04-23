@@ -14,6 +14,7 @@ Cheap and easy way to transcribe without whipping out MuseScore or any other mus
 a bunch of frames once, add a little helping config, and you're ready to JAM!
 
 ![alt='promo.png'](promo.png)
+![alt='promo2.png'](promo2.png)
 
 ## Getting Started
 
