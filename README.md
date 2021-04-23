@@ -54,7 +54,7 @@ To add a new song to be supported by the LazyTabReader, do the following:
   subtitle: 'ALBUM_NAME (RELEASE_YEAR)',
   artist: 'ARTIST_NAME',
   instrumentalist: 'INSTRUMENTALIST_NAME',
-  backingTrack: 'LINK_TO_BACKING_TRACK',
+  source: 'LINK_TO_SOURCE',
   style: 'STYLE',
   tuning: 'Standard Tuning',
   tempo: '100 BPM',
