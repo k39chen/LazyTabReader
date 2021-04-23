@@ -38,7 +38,7 @@ To add a new song to be supported by the LazyTabReader, do the following:
 4. Add new song to song bank
     1. Open `SongBank.js` and add new entry using the provided template as a starting point
     2. Make appropriate song data adjustments
-5. Open `LazyTabReader.html`
+5. Open `index.html`
     1. From UI, click the song that you wish to play
 6. Ready to JAM
 
