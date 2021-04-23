@@ -8,7 +8,8 @@
   font-size: 16px;
   color: #595959;
 
-  --top-bar-height: 5.5em;
+  --accent-color: #ff5400;
+
   --side-bar-expanded-width: 18em;
   --side-bar-collapsed-width: 3em;
 }
@@ -23,35 +24,11 @@ input {
   box-sizing: border-box;
 }
 
-/* TOP BAR STYLES */
-
-#topBar {
-  position: relative;
-  z-index: 1000;
-  height: var(--top-bar-height);
-  padding: 1em 1.5em;
-  background-color: #fafafa;
-  border-bottom: solid 1px #d7d7d7;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  box-sizing: border-box;
-}
-
-#topBar > h1 {
-  font-size: 1.5em;
-  font-weight: bold;
-}
-
-#topBar > h2 {
-  margin-top: 0.25em;
-  color: #999;
-}
-
 /* SIDE BAR STYLES */
 
 #sideBar {
   position: absolute;
-  top: var(--top-bar-height);
+  top: 0;
   bottom: 0;
   left: 0;
   width: var(--side-bar-expanded-width);
@@ -60,6 +37,17 @@ input {
   text-align: center;
   box-shadow: 4px 0 8px rgba(0, 0, 0, 0.2);
   box-sizing: border-box;
+}
+
+#sideBar > h1 {
+  margin-top: 1em;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+#sideBar > h2 {
+  margin-top: 0.25em;
+  color: #999;
 }
 
 #songBankFilters {
@@ -75,7 +63,12 @@ input {
 }
 
 #songBankList {
-  margin-top: 1em;
+  position: absolute;
+  top: 11em;
+  bottom: 0;
+  overflow: auto;
+  width: 100%;
+  border-top: solid 1px #d7d7d7;
 }
 
 .song-list-item {
@@ -91,10 +84,19 @@ input {
 
 .song-list-item:first-child {
   margin-top: 0;
+  border-top: none;
 }
 
 .song-list-item:hover {
   background-color: #e5f1f7;
+}
+
+.song-list-item-frame-count {
+  margin-bottom: 0.25em;
+  color: var(--accent-color);
+  font-size: 0.75em;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 
 .song-list-item-title {
@@ -126,11 +128,11 @@ input {
 #songPageContainer {
   overflow: auto;
   position: absolute;
-  top: var(--top-bar-height);
+  top: 0;
   bottom: 0;
   left: var(--side-bar-expanded-width);
   right: 0;
-  padding: 3em 5em 5em;
+  padding: 3em 2em 5em;
   box-sizing: border-box;
 }
 
@@ -172,7 +174,6 @@ input {
 #title {
   font-size: 2em;
   font-weight: bold;
-  text-transform: uppercase;
 }
 
 #subtitle {

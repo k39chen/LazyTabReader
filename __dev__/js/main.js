@@ -3,6 +3,10 @@
 var SONG_DATA = null;
 
 (function() {
+  const songBankFilterInputEl = document.getElementById('songBankFilterInput');
+
+  songBankFilterInputEl.focus();
+
   populateSongBank();
 })();
 
@@ -22,6 +26,7 @@ function populateSongBank() {
     songItemEl.dataset.songId = songData.id;
 
     songItemEl.innerHTML = `
+      <div class="song-list-item-frame-count">${songData.totalRegisteredFrames} frame${songData.totalRegisteredFrames === 1 ? '' : 's'}</div>
       <div class="song-list-item-title">${songData.title}</div>
       <div class="song-list-artist">${songData.artist}</div>
       <div class="song-list-item-subtitle">${songData.subtitle}</div>
