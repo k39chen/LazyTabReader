@@ -13,13 +13,13 @@ a bunch of frames once, add a little helping config, and you're ready to JAM!
 
 Static webpage! That's right, no fancy front-end development framework, also too lazy to make a GitHub Page.
 
-Simply, download the project as a ZIP, open `LazyTabReader.html` in the downloaded directory, new tab will open. You're welcome :) 
+Simply, download the project as a ZIP, open `LazyTabReader.html` in the downloaded directory, new tab will open. You're welcome :)
 
 ## How to add new song
 
 To add a new song to be supported by the LazyTabReader, do the following:
 
-1. Create new folder with the pattern: `${Song name} - ${Artist} (${Year})` (call this `X` for ths purpose of this guide)
+1. Create new folder with the pattern: `${Artist} - ${Song name} (${Year})` (call this `X` for ths purpose of this guide)
 2. Create subfolder `frames`
     1. Take screenshots and save to `frames`
     2. Once all frames are created, rename accordingly, in order (1-indexed, with zero prefix buffer)
@@ -35,7 +35,7 @@ To add a new song to be supported by the LazyTabReader, do the following:
 ```
 {
   // this is the singly most important field to populate correctly
-  id: "{SONG_TITLE} - {ARTIST} ({RELEASE_YEAR})",
+  id: "{ARTIST} - {SONG_TITLE} ({RELEASE_YEAR})",
 
   // misc metadata
   title: 'SONG_TITLE',
@@ -83,4 +83,3 @@ NOTE: final file names should have these characteristics:
 License
 -------------
 Copyright (c) 2021 Kevin Chen.
-

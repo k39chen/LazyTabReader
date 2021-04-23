@@ -7,7 +7,7 @@ const SONG_BANK = [
   /*
   {
     // this is the singly most important field to populate correctly
-    id: "{SONG_TITLE} - {ARTIST} ({RELEASE_YEAR})",
+    id: "{ARTIST} - {SONG_TITLE} ({RELEASE_YEAR})",
 
     // misc metadata
     title: 'SONG_TITLE',
@@ -20,7 +20,7 @@ const SONG_BANK = [
     tempo: '100 BPM',
 
     // frame data
-    totalRegisteredFrames: 100,
+    totalRegisteredFrames: 100,Sc
 
     // this will be the most annoying part, to get these values,
     // first just insert the natural dimensions of each screenshot (average)
@@ -33,10 +33,10 @@ const SONG_BANK = [
   */
 
   //================================================================
-  // Orion - Metallica (2005)
+  // Metallica - Orion  (2005)
   //================================================================
   {
-    id: 'Orion - Metallica (2005)',
+    id: 'Metallica - Orion (2005)',
     title: 'Orion',
     subtitle: 'Master of Puppets (2005)',
     artist: 'Metallica',
@@ -45,7 +45,7 @@ const SONG_BANK = [
     tuning: 'Standard Tuning',
     style: 'Heavy Metal',
     tempo: '129 BPM',
-    totalRegisteredFrames: 81,
+    totalRegisteredFrames: 80,
     frameWidth: 864,
     frameHeight: 200
   }
