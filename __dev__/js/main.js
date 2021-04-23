@@ -53,26 +53,14 @@ function populateSongBank() {
     const sideBarEl = document.getElementById('sideBar');
     sideBarEl.className = 'initial-state';
     document.title = 'Lazy Tab Reader';
+    applySearchTerm('');
+
+    setTimeout(() => songBankFilterInputEl.focus(), 100)
   });
 
   songBankFilterInputEl.addEventListener('keyup', (ev) => {
-    const songListEl = document.getElementById('songBankList');
-    const songEls = songListEl.getElementsByClassName('song-list-item');
-    const value = ev.currentTarget.value.toLowerCase();
-
-    let el;
-    let label;
-    for (let i = 0; i < songEls.length; i++) {
-      el = songEls[i];
-      label = el.innerText.trim().toLowerCase();
-
-      if (label.indexOf(value) >= 0) {
-        el.hidden = false;
-      } else {
-        el.hidden = true;
-      }
-    }
-    setBankCount()
+    ev.stopPropagation();
+    applySearchTerm(ev.currentTarget.value);
   });
 
   setTimeout(() => {
@@ -93,6 +81,28 @@ function populateSongBank() {
       }
     });
   }, 1000);
+}
+
+function applySearchTerm(val) {
+  const songBankFilterInputEl = document.getElementById('songBankFilterInput');
+  const songListEl = document.getElementById('songBankList');
+  const songEls = songListEl.getElementsByClassName('song-list-item');
+  const value = val.toLowerCase();
+
+  let el;
+  let label;
+  for (let i = 0; i < songEls.length; i++) {
+    el = songEls[i];
+    label = el.innerText.trim().toLowerCase();
+
+    if (label.indexOf(value) >= 0) {
+      el.hidden = false;
+    } else {
+      el.hidden = true;
+    }
+  }
+  setBankCount();
+  songBankFilterInputEl.value = val;
 }
 
 function setBankCount() {
@@ -180,6 +190,7 @@ function openSong(songId) {
 
   populateSongData();
   populateFrames();
+  applySearchTerm('');
   stopAutoScroller();
 }
 
