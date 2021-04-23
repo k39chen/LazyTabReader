@@ -72,9 +72,27 @@ function populateSongBank() {
         el.hidden = true;
       }
     }
-
     setBankCount()
   });
+
+  setTimeout(() => {
+    window.addEventListener('keyup', (ev) => {
+      const keyCode = ev.which || ev.keyCode;
+      switch (keyCode) {
+        case 82: // R
+          window.toggleFilter();
+          break;
+        case 65: // A
+          window.toggleAutoscroll();
+          break;
+        case 70: // F
+          window.toggleFullscreen();
+          break;
+        default:
+          break;
+      }
+    });
+  }, 1000);
 }
 
 function setBankCount() {
@@ -115,11 +133,11 @@ function openSong(songId) {
 
   songPageContainerEl.innerHTML = `
     <div id="viewControls">
-      <div id="fullscreenToggle"">Enter Fullscreen</div>
-      <div id="filterToggle"">Apply Filter</div>
+      <div id="fullscreenToggle"">Enter <em>F</em>ullscreen</div>
+      <div id="filterToggle"">Apply Filte<em>r</em></div>
 
       <div id="autoscrollToggleContainer">
-        <div id="autoscrollToggle"">Enable Autoscroll</div>
+        <div id="autoscrollToggle"">Enable <em>A</em>utoscroll</div>
         <div id="autoscrollSpeedContainer" hidden>
           <input id="autoscrollSpeed" type="number" value="${AUTOSCROLLER_SPEED}" />
           <span>ms/px</span>
@@ -171,10 +189,10 @@ function toggleFullscreen() {
 
   if (songPageContainerEl.className.indexOf('is-fullscreen') >= 0) {
     songPageContainerEl.className = '';
-    fullscreenToggleEl.innerHTML = 'Enter Fullscreen';
+    fullscreenToggleEl.innerHTML = 'Enter <em>F</em>ullscreen';
   } else {
     songPageContainerEl.className = 'is-fullscreen';
-    fullscreenToggleEl.innerHTML = 'Exit Fullscreen';
+    fullscreenToggleEl.innerHTML = 'Exit <em>F</em>ullscreen';
   }
 }
 
@@ -184,10 +202,10 @@ function toggleFilter() {
 
   if (framesEl.className.indexOf('filtered') >= 0) {
     framesEl.className = '';
-    filterToggleEl.innerHTML = 'Apply Filter';
+    filterToggleEl.innerHTML = 'Apply Filte<em>r</em>';
   } else {
     framesEl.className = 'filtered';
-    filterToggleEl.innerHTML = 'Remove Filter';
+    filterToggleEl.innerHTML = 'Remove Filte<em>r</em>';
   }
 }
 
@@ -214,11 +232,13 @@ function toggleAutoscroll() {
 
   if (AUTOSCROLLER) {
     stopAutoScroller();
-    autoscrollToggleEl.innerHTML = 'Enable Autoscroll';
+    autoscrollToggleEl.innerHTML = 'Enable <em>A</em>utoscroll';
     autoscrollSpeedContainerEl.hidden = true;
+    autoscrollSpeedEl.value = 200;
+    AUTOSCROLLER_SPEED = 200;
   } else {
     startAutoScroller();
-    autoscrollToggleEl.innerHTML = 'Disable Autoscroll';
+    autoscrollToggleEl.innerHTML = 'Disable <em>A</em>utoscroll';
     autoscrollSpeedContainerEl.hidden = false;
 
     setTimeout(() => autoscrollSpeedEl.select(), 100);

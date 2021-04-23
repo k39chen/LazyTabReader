@@ -212,6 +212,11 @@ input {
   overflow: hidden;
 }
 
+#viewControls em {
+  text-decoration: underline;
+  font-style: normal;
+}
+
 #fullscreenToggle, #filterToggle, #autoscrollToggleContainer {
   user-select: none;
   cursor: pointer;
