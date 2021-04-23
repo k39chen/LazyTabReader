@@ -44,31 +44,20 @@ To add a new song to be supported by the LazyTabReader, do the following:
 
 ### Here's what a template config looks like
 
-```
+```javascript
 {
-  // this is the singly most important field to populate correctly
-  id: "{ARTIST} - {SONG_TITLE} ({RELEASE_YEAR})",
-
-  // misc metadata
-  title: 'SONG_TITLE',
-  subtitle: 'ALBUM_NAME (RELEASE_YEAR)',
-  artist: 'ARTIST_NAME',
-  instrumentalist: 'INSTRUMENTALIST_NAME',
-  source: 'LINK_TO_SOURCE',
-  style: 'STYLE',
-  tuning: 'Standard Tuning',
-  tempo: '100 BPM',
-
-  // frame data
-  totalRegisteredFrames: 100,
-
-  // this will be the most annoying part, to get these values,
-  // first just insert the natural dimensions of each screenshot (average)
-  //
-  // then adjust accordingly
-  //
-  frameWidth: 1000,
-  frameHeight: 200
+                     id : "{ARTIST} - {SONG_TITLE} ({RELEASE_YEAR})",
+                  title : 'SONG_TITLE',
+               subtitle : 'ALBUM_NAME (RELEASE_YEAR)',
+                 artist : 'ARTIST_NAME',
+        instrumentalist : 'INSTRUMENTALIST_NAME',
+                 source : 'LINK_TO_SOURCE',
+                  style : 'STYLE',
+                 tuning : 'Standard Tuning',
+                  tempo : '100 BPM',
+  totalRegisteredFrames : 100,
+             frameWidth : 1000,
+            frameHeight : 200
 }
 ```
 
@@ -81,9 +70,9 @@ To add a new song to be supported by the LazyTabReader, do the following:
 5. Repeat until song is done and all frames are captured!
 6. Once all frames are screenshotted, all frames need to be indexed accordingly, can consider using the `__dev__/node_scripts/assignFrameIndex.js`, but that is definitely WIP
 
-NOTE: final file names should have these characteristics:
+**NOTE:** final file names should have these characteristics:
 - 1-indexed
-- No gaps
+- No gaps in file name sequencing (ie. 1,2,3,4,5 not 1,3,4,5)
 - prefix with zero buffers to match maximium number of digits (e.g. 81 frames = 2 digits, so 1.png should be 01.png, 230 frames = 3 digits, so 1.png should be 001.png etc)
 
 ## Code Overview
