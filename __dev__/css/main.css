@@ -123,6 +123,11 @@ input {
   color: #999;
 }
 
+.song-list-item-style {
+  margin: 0.25em 0;
+  color: #595959;
+}
+
 /* SIDE BAR STYLES INITIAL STATE */
 
 #sideBar.initial-state {
@@ -203,7 +208,7 @@ input {
   background: white;
 }
 
-#fullscreenToggle, #filterToggle {
+#fullscreenToggle, #filterToggle, #autoscrollToggle {
   user-select: none;
   cursor: pointer;
   float: right;
@@ -215,7 +220,8 @@ input {
 }
 
 #fullscreenToggle:hover,
-#filterToggle:hover {
+#filterToggle:hover,
+#autoscrollToggle:hover {
   text-decoration: underline;
 }
 

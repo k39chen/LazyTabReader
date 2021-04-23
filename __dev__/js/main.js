@@ -1,3 +1,8 @@
+
+// this will store the interval that handles auto-scrolling
+var AUTOSCROLLER = null;
+var AUTOSCROLLER_SPEED = 200; // 1px per 200ms
+
 // this global variable will store the actively opened song data, if null,
 // then no song data has been selected
 var SONG_DATA = null;
@@ -31,6 +36,7 @@ function populateSongBank() {
       <div class="song-list-item-title">${songData.title}</div>
       <div class="song-list-artist">${songData.artist}</div>
       <div class="song-list-item-subtitle">${songData.subtitle}</div>
+      <div class="song-list-item-style">- ${songData.style} -</div>
     `;
 
     songItemEl.addEventListener('click', (ev) => {
@@ -108,8 +114,9 @@ function openSong(songId) {
   sideBarEl.className = '';
 
   songPageContainerEl.innerHTML = `
-    <div id="fullscreenToggle" on-click="toggleFullscreen()">Enter Fullscreen</div>
-    <div id="filterToggle" on-click="toggleFilter()">Apply Filter</div>
+    <div id="fullscreenToggle"">Enter Fullscreen</div>
+    <div id="filterToggle"">Apply Filter</div>
+    <div id="autoscrollToggle"">Enable Autoscroll</div>
 
     <div id="header">
       <div id="info">
@@ -137,6 +144,7 @@ function openSong(songId) {
 
   document.getElementById('fullscreenToggle').addEventListener('click', () => toggleFullscreen());
   document.getElementById('filterToggle').addEventListener('click', () => toggleFilter());
+  document.getElementById('autoscrollToggle').addEventListener('click', () => toggleAutoscroll());
 
   populateSongData();
   populateFrames();
@@ -165,6 +173,33 @@ function toggleFilter() {
   } else {
     framesEl.className = 'filtered';
     filterToggleEl.innerHTML = 'Remove Filter';
+  }
+}
+
+function startAutoScroller() {
+  const songPageContainerEl = document.getElementById('songPageContainer');
+
+  songPageContainerEl.scrollTop = 0;
+
+  AUTOSCROLLER = setInterval(() => {
+    songPageContainerEl.scrollTop++;
+  }, AUTOSCROLLER_SPEED);
+}
+
+function stopAutoScroller() {
+  clearInterval(AUTOSCROLLER);
+  AUTOSCROLLER = null;
+}
+
+function toggleAutoscroll() {
+  const autoscrollToggleEl = document.getElementById('autoscrollToggle');
+
+  if (AUTOSCROLLER) {
+    stopAutoScroller();
+    autoscrollToggleEl.innerHTML = 'Enable Autoscroll';
+  } else {
+    startAutoScroller();
+    autoscrollToggleEl.innerHTML = 'Disable Autoscroll';
   }
 }
 
