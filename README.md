@@ -2,6 +2,12 @@
 
 Too lazy to transcribe, but not too lazy to write an app to read other people's amazing tabs; one frame at a time...
 
+## Credit
+
+MASSIVE SHOUT OUT TO https://www.youtube.com/c/CoverSolutions!
+
+Thank you for all the consistent content, accurate tabs. A bass practice wouldn't be complete without at least 3-4 hours of play alongs. 😃 🎸 🎸 🎸
+
 ## Introduction
 
 Cheap and easy way to transcribe without whipping out MuseScore or any other muscial notation software. Simply screenshot
@@ -13,7 +19,12 @@ a bunch of frames once, add a little helping config, and you're ready to JAM!
 
 Static webpage! That's right, no fancy front-end development framework, also too lazy to make a GitHub Page.
 
-Simply, download the project as a ZIP, open `LazyTabReader.html` in the downloaded directory, new tab will open. You're welcome :)
+Simply, follow these no-nonsense steps:
+
+1. Download the project as a ZIP
+2. Decompress the downloaded file
+3. Open `LazyTabReader.html`
+4. New tab will open in browser with songs that have been captured to-date. You're welcome 😉
 
 ## How to add new song
 

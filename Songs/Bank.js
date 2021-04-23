@@ -48,7 +48,25 @@ const SONG_BANK = [
     totalRegisteredFrames: 80,
     frameWidth: 864,
     frameHeight: 200
-  }
+  },
+
+  //================================================================
+  // Redtenbacher's Funkestra - Funktionality (2020)
+  //================================================================
+  {
+    id: 'Redtenbacher\'s Funkestra - Funktionality (2020)',
+    title: 'Funktionality',
+    subtitle: 'Beneath the Bassline (2020)',
+    artist: 'Redtenbacher\'s Funkestra',
+    instrumentalist: 'Stefan Redtenbacher',
+    backingTrack: 'https://youtu.be/H_T_yDUjHyk',
+    tuning: 'Standard Tuning',
+    style: 'Funk',
+    tempo: '100 BPM',
+    totalRegisteredFrames: 30,
+    frameWidth: 1070,
+    frameHeight: 300
+  },
 
   //================================================================
   //                 ----- END OF LIST -----
