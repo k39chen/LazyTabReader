@@ -1,0 +1,1502 @@
+<html>
+  <head>
+    <style>
+      html {
+        font-family: Arial;
+        font-size: 12px;
+      }
+      #table {
+        position: relative;
+        width: 100%;
+        height: 960px;
+        border: solid 1px black;
+        box-sizing: border-box;
+      }
+      table, td, th {
+        font-size: 12px;
+        border-collapse: collapse;
+      }
+      th, td {
+        position: relative;
+        vertical-align: middle;
+        text-align: center;
+        border: solid 1px black;
+      }
+      .top {
+        width: 100px;
+        height: 40px;
+        text-transform: uppercase;
+      }
+      .sideways {
+        width: 40px;
+      }
+      .sideways > span {
+        display: inline-block;
+        line-height: 14px;
+        transform: rotate(270deg);
+      }
+      .sideways > span > em {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        font-size: 11px;
+        font-weight: bold;
+        background: black;
+        color: white;
+        border-radius: 50%;
+        font-style: normal;
+      }
+      table.chord {
+        width: 100%;
+      }
+      table.chord td {
+        width: 12px;
+      }
+      .fret {
+        position: absolute;
+        top: -8px;
+        right: -5px;
+        background: white;
+        color: black;
+        border: solid 1px black;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 16px;
+        height: 16px;
+        font-size: 11px;
+        font-weight: bold;
+        border: solid 1px black;
+        box-sizing: border-box;
+      }
+      .fret.root {
+        background: black;
+        color: white;
+      }
+      .fret.push-down {
+        top: 8px;
+      }
+
+      .center-helper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        margin: 0 auto;
+      }
+
+      table.chord, table.fingering {
+        float: left;
+      }
+
+      table.fingering {
+        width: 16px;
+        height: 52px;
+        margin-left: 4px;
+      }
+
+      table.fingering,
+      table.fingering td {
+        font-size: 11px;
+        border: none;
+      }
+
+      table.fingering td {
+        height: 16px;
+      }
+
+      table.fingering .root {
+        background: white;
+        color: black;
+        border: solid 1px black;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 16px;
+        height: 16px;
+        border: solid 1px black;
+        box-sizing: border-box;
+
+      }
+    </style>
+
+  </head>
+
+  <body>
+    <table id="table">
+      <thead>
+        <th></th>
+        <th></th>
+
+        <th class="top">Major</th>
+        <th class="top">Minor</th>
+        <th class="top">Dominant</th>
+        <th class="top">1/2 Diminished</th>
+      </thead>
+
+      <tbody>
+        <!-- Closed 7ths -->
+        <tr>
+          <td class="sideways"><span>Closed 7ths</span></td>
+          <td class="sideways"><span><em>R</em> on A Str</span></td>
+
+          <!-- Closed 7th: Major -->
+          <td>
+            <div class="center-helper">
+              <table class="chord">
+                <tbody>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><span class="fret">7</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td><span class="fret">3</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><span class="fret root">R</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="fingering">
+                <tr><td><span>4</span></td></tr>
+                <tr><td><span>1</span></td></tr>
+                <tr><td><span class="root">2</span></td></tr>
+                <tr><td><span></span></td></tr>
+              </table>
+            </div>
+          </td>
+
+          <!-- Closed 7th: Minor -->
+          <td>
+            <div class="center-helper">
+              <table class="chord">
+                <tbody>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><span class="fret">7</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td><span class="fret">3</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><span class="fret root">R</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <table class="fingering">
+                <tr><td><span>3</span></td></tr>
+                <tr><td><span>1</span></td></tr>
+                <tr><td><span class="root">2</span></td></tr>
+                <tr><td><span></span></td></tr>
+              </table>
+            </div>
+          </td>
+
+          <!-- Closed 7th: Dominant -->
+          <td>
+            <div class="center-helper">
+              <table class="chord">
+                <tbody>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><span class="fret">7</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><span class="fret">3</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><span class="fret root">R</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <table class="fingering">
+                <tr><td><span>4</span></td></tr>
+                <tr><td><span>1</span></td></tr>
+                <tr><td><span class="root">3</span></td></tr>
+                <tr><td><span></span></td></tr>
+              </table>
+            </div>
+          </td>
+
+          <!-- Closed 7th: 1/2 Diminished -->
+          <td>
+            <div class="center-helper">
+              <table class="chord">
+                <tbody>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><span class="fret">7</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><span class="fret">5</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><span class="fret root">R</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <table class="fingering">
+                <tr><td><span>1</span></td></tr>
+                <tr><td><span>2</span></td></tr>
+                <tr><td><span class="root">1</span></td></tr>
+                <tr><td><span></span></td></tr>
+              </table>
+            </div>
+          </td>
+        </tr>
+
+        <!-- Open 7ths -->
+        <tr>
+          <td class="sideways"><span>Open 7ths</span></td>
+          <td class="sideways"><span><em>R</em> on E Str</span></td>
+
+          <!-- Open 7ths: Major -->
+          <td>
+            <div class="center-helper">
+              <table class="chord">
+                <tbody>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><span class="fret">3</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><span class="fret">7</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td><span class="fret root push-down">R</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <table class="fingering">
+                <tr><td><span>4</span></td></tr>
+                <tr><td><span>3</span></td></tr>
+                <tr><td><span></span></td></tr>
+                <tr><td><span class="root">1</span></td></tr>
+              </table>
+            </div>
+          </td>
+
+          <!-- Open 7ths: Minor -->
+          <td>
+            <div class="center-helper">
+              <table class="chord">
+                <tbody>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><span class="fret">3</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><span class="fret">7</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><span class="fret root push-down">R</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <table class="fingering">
+                <tr><td><span>3</span></td></tr>
+                <tr><td><span>2</span></td></tr>
+                <tr><td><span></span></td></tr>
+                <tr><td><span class="root">1</span></td></tr>
+              </table>
+            </div>
+          </td>
+
+          <!-- Open 7ths: Dominant -->
+          <td>
+            <div class="center-helper">
+              <table class="chord">
+                <tbody>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><span class="fret">3</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><span class="fret">7</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><span class="fret root push-down">R</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <table class="fingering">
+                <tr><td><span>4</span></td></tr>
+                <tr><td><span>2</span></td></tr>
+                <tr><td><span></span></td></tr>
+                <tr><td><span class="root">1</span></td></tr>
+              </table>
+            </div>
+          </td>
+
+          <!-- Open 7ths: 1/2 Diminished -->
+          <td>
+            <div class="center-helper">
+              <table class="chord">
+                <tbody>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><span class="fret">3</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><span class="fret">7</span></td>
+                    <td><span class="fret push-down">5</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><span class="fret root push-down">R</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <table class="fingering">
+                <tr><td><span>1</span></td></tr>
+                <tr><td><span>1</span></td></tr>
+                <tr><td><span>2</span></td></tr>
+                <tr><td><span class="root">1</span></td></tr>
+              </table>
+            </div>
+          </td>
+        </tr>
+
+        <!-- Triads -->
+        <tr>
+          <td class="sideways"><span>Triads</span></td>
+          <td class="sideways"><span><em>R</em> on A Str</span></td>
+
+          <!-- Triads: Major -->
+          <td>
+            <div class="center-helper">
+              <table class="chord">
+                <tbody>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td><span class="fret">5</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><span class="fret">3</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><span class="fret root">R</span></td>
+                    <td>&nbsp;</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <table class="fingering">
+                <tr><td><span>1</span></td></tr>
+                <tr><td><span>3</span></td></tr>
+                <tr><td><span class="root">4</span></td></tr>
+                <tr><td><span></span></td></tr>
+              </table>
+            </div>
+          </td>
+
+          <!-- Triads: Minor -->
+          <td>
+            <div class="center-helper">
+              <table class="chord">
+                <tbody>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td><span class="fret">5</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><span class="fret">3</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><span class="fret root">R</span></td>
+                    <td>&nbsp;</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <table class="fingering">
+                <tr><td><span>1</span></td></tr>
+                <tr><td><span>2</span></td></tr>
+                <tr><td><span class="root">4</span></td></tr>
+                <tr><td><span></span></td></tr>
+              </table>
+            </div>
+          </td>
+
+          <!-- Triads: Dominant -->
+          <td>
+            <div class="center-helper">
+              <table class="chord">
+                <tbody>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td><span class="fret">5</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><span class="fret">3</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><span class="fret root">R</span></td>
+                    <td>&nbsp;</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <table class="fingering">
+                <tr><td><span>1</span></td></tr>
+                <tr><td><span>3</span></td></tr>
+                <tr><td><span class="root">4</span></td></tr>
+                <tr><td><span></span></td></tr>
+              </table>
+            </div>
+          </td>
+
+          <!-- Triads: 1/2 Diminished -->
+          <td>
+            <div class="center-helper">
+              <table class="chord">
+                <tbody>
+                  <tr>
+                    <td><span class="fret">5</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><span class="fret">3</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><span class="fret root">R</span></td>
+                    <td>&nbsp;</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <table class="fingering">
+                <tr><td><span>1</span></td></tr>
+                <tr><td><span>2</span></td></tr>
+                <tr><td><span class="root">4</span></td></tr>
+                <tr><td><span></span></td></tr>
+              </table>
+            </div>
+          </td>
+        </tr>
+
+        <!-- 1st Inv Triads -->
+        <tr>
+          <td class="sideways"><span>1st Inv Triads</span></td>
+          <td class="sideways"><span><em>R</em> on G Str</span></td>
+
+          <!-- 1st Inv Triads: Major -->
+          <td>
+            <div class="center-helper">
+              <table class="chord">
+                <tbody>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td><span class="fret root">R</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td><span class="fret">5</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><span class="fret">3</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <table class="fingering">
+                <tr><td><span class="root">1</span></td></tr>
+                <tr><td><span>1</span></td></tr>
+                <tr><td><span>4</span></td></tr>
+                <tr><td><span></span></td></tr>
+              </table>
+            </div>
+          </td>
+
+          <!-- 1st Inv Triads: Minor -->
+          <td>
+            <div class="center-helper">
+              <table class="chord">
+                <tbody>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><span class="fret root">R</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><span class="fret">5</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><span class="fret">3</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <table class="fingering">
+                <tr><td><span class="root">1</span></td></tr>
+                <tr><td><span>1</span></td></tr>
+                <tr><td><span>2</span></td></tr>
+                <tr><td><span></span></td></tr>
+              </table>
+            </div>
+          </td>
+
+          <!-- 1st Inv Triads: Dominant -->
+          <td>
+            <div class="center-helper">
+              <table class="chord">
+                <tbody>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td><span class="fret root">R</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td><span class="fret">5</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><span class="fret">3</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <table class="fingering">
+                <tr><td><span class="root">1</span></td></tr>
+                <tr><td><span>1</span></td></tr>
+                <tr><td><span>4</span></td></tr>
+                <tr><td><span></span></td></tr>
+              </table>
+            </div>
+          </td>
+
+          <!-- 1st Inv Triads: 1/2 Diminished -->
+          <td>
+            <div class="center-helper">
+              <table class="chord">
+                <tbody>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><span class="fret root">R</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td><span class="fret">5</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><span class="fret">3</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <table class="fingering">
+                <tr><td><span class="root">2</span></td></tr>
+                <tr><td><span>1</span></td></tr>
+                <tr><td><span>3</span></td></tr>
+                <tr><td><span></span></td></tr>
+              </table>
+            </div>
+          </td>
+        </tr>
+
+        <!-- 1st Inv 7ths -->
+        <tr>
+          <td class="sideways"><span>1st Inv 7ths</span></td>
+          <td class="sideways"><span><em>R</em> on G Str</span></td>
+
+          <!-- 1st Inv 7ths: Major -->
+          <td>
+            <div class="center-helper">
+              <table class="chord">
+                <tbody>
+                  <tr>
+                    <td><span class="fret root">R</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><span class="fret">7</span></td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><span class="fret">3</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <table class="fingering">
+                <tr><td><span class="root">1</span></td></tr>
+                <tr><td><span>4</span></td></tr>
+                <tr><td><span>2</span></td></tr>
+                <tr><td><span></span></td></tr>
+              </table>
+            </div>
+          </td>
+
+          <!-- 1st Inv 7ths: Minor -->
+          <td>
+            <div class="center-helper">
+              <table class="chord">
+                <tbody>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td><span class="fret root">R</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><span class="fret">7</span></td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><span class="fret">3</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <table class="fingering">
+                <tr><td><span class="root">1</span></td></tr>
+                <tr><td><span>4</span></td></tr>
+                <tr><td><span>2</span></td></tr>
+                <tr><td><span></span></td></tr>
+              </table>
+            </div>
+          </td>
+
+          <!-- 1st Inv 7ths: Dominant -->
+          <td>
+            <div class="center-helper">
+              <table class="chord">
+                <tbody>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td><span class="fret root">R</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><span class="fret">7</span></td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><span class="fret">3</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <table class="fingering">
+                <tr><td><span class="root">1</span></td></tr>
+                <tr><td><span>4</span></td></tr>
+                <tr><td><span>3</span></td></tr>
+                <tr><td><span></span></td></tr>
+              </table>
+            </div>
+          </td>
+
+          <!-- 1st Inv 7ths: 1/2 Diminished -->
+          <td>
+            <div class="center-helper">
+              <table class="chord">
+                <tbody>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td><span class="fret root">R</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><span class="fret">7</span></td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><span class="fret">3</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <table class="fingering">
+                <tr><td><span class="root">1</span></td></tr>
+                <tr><td><span>4</span></td></tr>
+                <tr><td><span>2</span></td></tr>
+                <tr><td><span></span></td></tr>
+              </table>
+            </div>
+          </td>
+        </tr>
+
+        <!-- 2nd Inv Triads -->
+        <tr>
+          <td class="sideways"><span>2nd Inv Triads</span></td>
+          <td class="sideways"><span><em>R</em> on D Str</span></td>
+
+          <!-- 2nd Inv Triads: Major -->
+          <td>
+            <div class="center-helper">
+              <table class="chord">
+                <tbody>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><span class="fret">3</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><span class="fret root">R</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><span class="fret">5</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <table class="fingering">
+                <tr><td><span>1</span></td></tr>
+                <tr><td><span class="root">3</span></td></tr>
+                <tr><td><span>2</span></td></tr>
+                <tr><td><span></span></td></tr>
+              </table>
+            </div>
+          </td>
+
+          <!-- 2nd Inv Triads: Minor -->
+          <td>
+            <div class="center-helper">
+              <table class="chord">
+                <tbody>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td><span class="fret">3</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><span class="fret root">R</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><span class="fret">5</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <table class="fingering">
+                <tr><td><span>1</span></td></tr>
+                <tr><td><span class="root">4</span></td></tr>
+                <tr><td><span>3</span></td></tr>
+                <tr><td><span></span></td></tr>
+              </table>
+            </div>
+          </td>
+
+          <!-- 2nd Inv Triads: Dominant -->
+          <td>
+            <div class="center-helper">
+              <table class="chord">
+                <tbody>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><span class="fret">3</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><span class="fret root">R</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><span class="fret">5</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <table class="fingering">
+                <tr><td><span>1</span></td></tr>
+                <tr><td><span class="root">3</span></td></tr>
+                <tr><td><span>2</span></td></tr>
+                <tr><td><span></span></td></tr>
+              </table>
+            </div>
+          </td>
+
+          <!-- 2nd Inv Triads: 1/2 Diminished -->
+          <td>
+            <div class="center-helper">
+              <table class="chord">
+                <tbody>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td><span class="fret">3</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><span class="fret root">R</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><span class="fret">5</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <table class="fingering">
+                <tr><td><span>1</span></td></tr>
+                <tr><td><span class="root">4</span></td></tr>
+                <tr><td><span>2</span></td></tr>
+                <tr><td><span></span></td></tr>
+              </table>
+            </div>
+          </td>
+        </tr>
+
+        <!-- 2nd Inv 7ths -->
+        <tr>
+          <td class="sideways"><span>2nd Inv 7ths</span></td>
+          <td class="sideways"><span><em>7</em> on D Str</span></td>
+
+          <!-- 2nd Inv 7ths: Major -->
+          <td>
+            <div class="center-helper">
+              <table class="chord">
+                <tbody>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><span class="fret">3</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><span class="fret root">7</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><span class="fret">5</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <table class="fingering">
+                <tr><td><span>1</span></td></tr>
+                <tr><td><span class="root">1</span></td></tr>
+                <tr><td><span>2</span></td></tr>
+                <tr><td><span></span></td></tr>
+              </table>
+            </div>
+          </td>
+
+          <!-- 2nd Inv 7ths: Minor -->
+          <td>
+            <div class="center-helper">
+              <table class="chord">
+                <tbody>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td><span class="fret">3</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td><span class="fret root">7</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><span class="fret">5</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <table class="fingering">
+                <tr><td><span>1</span></td></tr>
+                <tr><td><span class="root">1</span></td></tr>
+                <tr><td><span>3</span></td></tr>
+                <tr><td><span></span></td></tr>
+              </table>
+            </div>
+          </td>
+
+          <!-- 2nd Inv 7ths: Dominant -->
+          <td>
+            <div class="center-helper">
+              <table class="chord">
+                <tbody>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><span class="fret">3</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td><span class="fret root">7</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><span class="fret">5</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <table class="fingering">
+                <tr><td><span>2</span></td></tr>
+                <tr><td><span class="root">1</span></td></tr>
+                <tr><td><span>3</span></td></tr>
+                <tr><td><span></span></td></tr>
+              </table>
+            </div>
+          </td>
+
+          <!-- 2nd Inv 7ths: 1/2 Diminished -->
+          <td>
+            <div class="center-helper">
+              <table class="chord">
+                <tbody>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><span class="fret">3</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><span class="fret root">7</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><span class="fret">5</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <table class="fingering">
+                <tr><td><span>1</span></td></tr>
+                <tr><td><span class="root">1</span></td></tr>
+                <tr><td><span>2</span></td></tr>
+                <tr><td><span></span></td></tr>
+              </table>
+            </div>
+          </td>
+        </tr>
+
+        <!-- Open Triads -->
+        <tr>
+          <td class="sideways"><span>Open Triads</span></td>
+          <td class="sideways"><span><em>R</em> on D Str</span></td>
+
+          <!-- Open Triads: Major -->
+          <td>
+            <div class="center-helper">
+              <table class="chord">
+                <tbody>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><span class="fret">5</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td><span class="fret root">R</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><span class="fret push-down">3</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <table class="fingering">
+                <tr><td><span>4</span></td></tr>
+                <tr><td><span>1</span></td></tr>
+                <tr><td><span></span></td></tr>
+                <tr><td><span class="root">3</span></td></tr>
+              </table>
+            </div>
+          </td>
+
+          <!-- Open Triads: Minor -->
+          <td>
+            <div class="center-helper">
+              <table class="chord">
+                <tbody>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><span class="fret">5</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td><span class="fret root">R</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><span class="fret push-down">3</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <table class="fingering">
+                <tr><td><span>4</span></td></tr>
+                <tr><td><span>1</span></td></tr>
+                <tr><td><span></span></td></tr>
+                <tr><td><span class="root">2</span></td></tr>
+              </table>
+            </div>
+          </td>
+
+          <!-- Open Triads: Dominant -->
+          <td>
+            <div class="center-helper">
+              <table class="chord">
+                <tbody>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><span class="fret">5</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td><span class="fret root">R</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><span class="fret push-down">3</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <table class="fingering">
+                <tr><td><span>4</span></td></tr>
+                <tr><td><span>1</span></td></tr>
+                <tr><td><span></span></td></tr>
+                <tr><td><span class="root">3</span></td></tr>
+              </table>
+            </div>
+          </td>
+
+          <!-- Open Triads: 1/2 Diminished -->
+          <td>
+            <div class="center-helper">
+              <table class="chord">
+                <tbody>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><span class="fret">5</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td><span class="fret root">R</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td><span class="fret push-down">3</span></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <table class="fingering">
+                <tr><td><span>3</span></td></tr>
+                <tr><td><span>1</span></td></tr>
+                <tr><td><span></span></td></tr>
+                <tr><td><span class="root">2</span></td></tr>
+              </table>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
